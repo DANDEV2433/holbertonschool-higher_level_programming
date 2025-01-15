@@ -9,6 +9,6 @@ else:
 if digi > 5:
     print(f"Last digit of {number} is {digi} and is greater than {5}")
 elif digi == 0:
-    print(f"Last digit of {number} is {digi} is {0} and is {0}")
+    print(f"Last digit of {number} is {digi} and is {0}")
 else:
     print(f"Last digit of {number} is {digi} and is less than {6} and not {0}")
