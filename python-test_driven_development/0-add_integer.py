@@ -23,5 +23,5 @@ Parameters:
     if (a != a):
         raise TypeError("a must be a valid number")
     if (b != b):
-        raise TypeError("a must be a valid number")
+        raise TypeError("b must be a valid number")
     return int(a) + int(b)
