@@ -50,3 +50,9 @@ TypeError: b must be a valid number
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+
+# test NaN argument
+>>> add_integer(float('nan'), 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
