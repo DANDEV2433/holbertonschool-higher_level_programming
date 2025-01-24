@@ -21,7 +21,7 @@ Parameters:
     if not isinstance(b, (int, float)) or b is None:
         raise TypeError("b must be an integer")
     if (a != a):
-        raise TypeError("a must be an integer")
+        raise TypeError("a must be a valid number")
     if (b != b):
-        raise TypeError("b must be an integer")
+        raise TypeError("a must be a valid number")
     return int(a) + int(b)
