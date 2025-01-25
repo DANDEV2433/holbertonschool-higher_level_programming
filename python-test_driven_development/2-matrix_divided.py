@@ -23,20 +23,14 @@ Parameters:
     error = "matrix must be a matrix (list of lists) of integers/floats"
     # Vérifier que matrix est une liste de listes
     if not isinstance(matrix, list):
-        raise TypeError(
-            "error"
-        )
+        raise TypeError(error)
     if not all(isinstance(row, list) for row in matrix):
-        raise TypeError(
-            "error"
-        )
+        raise TypeError(error)
     # Vérifier que chaque élément de matrix est un nombre
     for row in matrix:
         for number in row:
             if not isinstance(number, (int, float)):
-                raise TypeError(
-                    "error"
-                )
+                raise TypeError(error)
     # Vérifier que toutes les lignes de matrix ont la même taille
     for row in matrix:
         if len(row) != len(matrix[0]):
