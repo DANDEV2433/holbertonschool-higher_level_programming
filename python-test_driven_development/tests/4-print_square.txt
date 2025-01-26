@@ -26,6 +26,12 @@ exemple functions tests that prints a square with the character #.
 ##########
 ##########
 
+# test for missing argument
+>>> print_square()
+Traceback (most recent call last):
+    ...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
 # test for print square size -12
 >>> print_square(-12)
 Traceback (most recent call last):
