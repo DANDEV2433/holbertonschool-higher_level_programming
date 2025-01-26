@@ -1,0 +1,17 @@
+"""
+
+exemple functions tests that prints my name is first_name, last_name
+
+"""
+# import de la fonction
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# test for print two string
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+#test for print an integer and a string
+>>> say_my_name("52", "holby")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
