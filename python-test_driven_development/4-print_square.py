@@ -19,8 +19,6 @@ Parameters:
     ValueError: size must be >= 0
 
     """
-    if size is None:
-        raise TypeError("size must be an integer")
     if not isinstance(size, int):
         raise TypeError("size must be an integer")
     if size < 0:

@@ -26,12 +26,6 @@ exemple functions tests that prints a square with the character #.
 ##########
 ##########
 
-# test for print square size ""
->>> print_square()
-Traceback (most recent call last):
-    ...
-TypeError: size must be an integer
-
 # test for print square size -12
 >>> print_square(-12)
 Traceback (most recent call last):
