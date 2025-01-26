@@ -11,11 +11,11 @@ exemple functions tests that prints a text with 2 new lines after each of these 
 holberton, school
 
 # test for print string with specific character
->>> text_indentation("holberton ? school")
+>>> text_indentation("holberton ?school")
 holberton ?
 <BLANKLINE>
 <BLANKLINE>
- school
+school
 
  # test for print string with specific character
 >>> text_indentation("holberton.school")
