@@ -1,0 +1,48 @@
+"""
+
+exemple functions tests that prints a square with the character #. 
+
+"""
+# import de la fonction
+>>> print_square = __import__('4-print_square').print_square
+
+# test for print square size 4
+>>> print_square(4)
+####
+####
+####
+####
+
+# test for print square size 10
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+# test for print square size 0
+>>> print_square(0)
+
+# test for print square size -12
+>>> print_square(-12)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+# test for print square size string
+>>> print_square("School")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+# test for print square size float
+>>> print_square("1.5")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
