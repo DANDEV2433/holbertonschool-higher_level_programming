@@ -21,8 +21,14 @@ Parameters:
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     specific_char = (".", "?", ":")
-    for char in text:
-        print(char, end="")
-        if char in specific_char:
-            print("\n\n")
-        continue
+    i = 0
+    length = len(text)
+    while i < length:
+        print(text[i], end="")
+        if text[i] in specific_char:
+            print("\n\n", end="")
+            i += 1
+            while i < length and text[i] == " ":
+                i += 1
+            continue
+        i += 1  # Incrémenter seulement si ce n'est pas un caractère spécifique

@@ -14,20 +14,17 @@ holberton, school
 >>> text_indentation("holberton ?school")
 holberton ?
 <BLANKLINE>
-<BLANKLINE>
 school
 
  # test for print string with specific character
->>> text_indentation("holberton.school")
+>>> text_indentation("holberton. school")
 holberton.
-<BLANKLINE>
 <BLANKLINE>
 school
 
-  # test for print string with specific character
->>> text_indentation("holberton:school")
+# test for print string with specific character
+>>> text_indentation("holberton: school")
 holberton:
-<BLANKLINE>
 <BLANKLINE>
 school
 
