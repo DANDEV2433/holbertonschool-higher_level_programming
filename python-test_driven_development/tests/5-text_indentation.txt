@@ -7,8 +7,8 @@ exemple functions tests that prints a text with 2 new lines after each of these 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 # test for print string
->>> text_indentation("holberton,school")
-holberton,school
+>>> text_indentation("holberton, school")
+holberton, school
 
 # test for print string with specific character
 >>> text_indentation("holberton ? school")
@@ -16,6 +16,20 @@ holberton ?
 <BLANKLINE>
 <BLANKLINE>
  school
+
+ # test for print string with specific character
+>>> text_indentation("holberton.school")
+holberton.
+<BLANKLINE>
+<BLANKLINE>
+school
+
+  # test for print string with specific character
+>>> text_indentation("holberton:school")
+holberton:
+<BLANKLINE>
+<BLANKLINE>
+school
 
 # test for print integer
 >>> text_indentation(14)
