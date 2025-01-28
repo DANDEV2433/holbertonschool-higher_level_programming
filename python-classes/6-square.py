@@ -57,13 +57,13 @@ class Square:
         prints in stdout the square with the character #
         """
         if self.__size == 0:
-            print("--$")
+            print() 
         else:
             for row in range(self.__position[1]):
-                print("")
+                print()
             for row in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size + "$")
-            print("--$")
+        print("--$")
 
     @property
     def position(self):
@@ -72,7 +72,7 @@ class Square:
         """
         return self.__position
 
-    @property
+    @position.setter
     def position(self, value):
         """
         setter property for set position
@@ -80,7 +80,7 @@ class Square:
         TypeError:
                 position must be a tuple of 2 positive integers
         """
-        if not isinstance(value, tuple) and len(value) != 2:
+        if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         for num in value:
             if not isinstance(num, int) or num < 0:
