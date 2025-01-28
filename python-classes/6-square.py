@@ -17,8 +17,8 @@ class Square:
             position (tuple): the position of the Square
                     TypeError  : if size isn't an integer
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """
@@ -57,13 +57,12 @@ class Square:
         prints in stdout the square with the character #
         """
         if self.__size == 0:
-            print() 
-        else:
-            for row in range(self.__position[1]):
-                print()
-            for row in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size + "$")
-        print("--$")
+            print("")
+            return
+        for row in range(self.__position[1]):
+            print("")
+        for row in range(self.__size):
+            print(" " * self.__position[0] + '#' * self.__size)
 
     @property
     def position(self):
