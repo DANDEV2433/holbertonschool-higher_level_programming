@@ -58,9 +58,10 @@ class Square:
         """
         if self.__size == 0:
             print("")
-            return
-        for row in range(self.__position[1]):
+        # Ajout de lignes vides en fonction de la position verticale
+        for column in range(self.__position[1]):
             print("")
+        # affichage du carré
         for row in range(self.__size):
             print(" " * self.__position[0] + '#' * self.__size)
 
