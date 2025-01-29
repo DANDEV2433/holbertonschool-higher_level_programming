@@ -92,7 +92,3 @@ class Rectangle:
             rectangle_str += "#" * self.__width + "\n"
             # Supprime le dernier saut de ligne, éviter une ligne vide en plus
         return rectangle_str.rstrip()
-
-    def __repr__(self):
-        # une chaîne formatée qui inclut le nom: class et valeurs des attributs
-        return f"<Rectangle(width={self.__width}, height={self.__height})>"
