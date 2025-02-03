@@ -1,0 +1,17 @@
+"""
+exemple functions tests that prints the list, but sorted (ascending sort)
+"""
+# import de la fonction
+>>> MyList = __import__("1-my_list").MyList
+
+#Test 1: Check module documentation
+>>> python3 -c 'print(__import__("1-my_list").__doc__)'
+class MyList that inherits from list
+
+Test 2: Check module documentation class
+>>> python3 -c 'print(__import__("1-my_list").MyList.__doc__)'
+class MyList that inherits from list
+
+Test 3: Check module documentation method
+>>> python3 -c 'print(__import__("1-my_list").MyList.print_sorted.__doc__)'
+Public instance method that prints the list, but sorted
