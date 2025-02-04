@@ -50,4 +50,4 @@ class Square(Rectangle):
         """
         return rectangle description
         """
-        return f"[Square] {self.__size}/{self.__size}"
+        return f"[Rectangle] {self.__size}/{self.__size}"
