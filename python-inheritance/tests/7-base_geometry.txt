@@ -1,0 +1,23 @@
+"""
+exemple functions tests that check docstring of module 7-base_geometrie and your elements
+"""
+
+
+# import of function
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> module = __import__("7-base_geometry").__doc__
+>>> len(module) > 1
+True
+
+>>> all_class = __import__("7-base_geometry").BaseGeometry.__doc__
+>>> len(all_class) > 1
+True
+
+>>> function_outside = __import__("7-base_geometry").BaseGeometry.area.__doc__
+>>> len(function_outside) > 1
+True
+
+>>> all_function_inside = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+>>> len(all_function_inside) > 1
+True
