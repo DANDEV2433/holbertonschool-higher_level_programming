@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """
 import ABC and abstractmethod module abc
-import module math for mathematical functions
 """
 from abc import ABC, abstractmethod
-import math
+"""
+Definition of the pi constant
+"""
+pi = 3.141592653589793
 
 """
 Setting up the Abstract Class Shape
@@ -32,10 +34,10 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return math.pi * self.radius ** 2
+        return pi * self.radius ** 2
 
     def perimeter(self):
-        return 2 * math.pi * self.radius
+        return 2 * pi * self.radius
 
 
 class Rectangle(Shape):
