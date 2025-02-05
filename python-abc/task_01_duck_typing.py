@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-import math
 """
 import ABC and abstractmethod module abc
+import module math for mathematical functions
 """
 from abc import ABC, abstractmethod
+import math
 
 """
 Setting up the Abstract Class Shape
