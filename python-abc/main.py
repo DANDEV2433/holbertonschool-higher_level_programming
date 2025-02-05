@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
-from task_00_abc import Animal, Dog, Cat
+from task_01_duck_typing import Circle, Rectangle, shape_info
 
-bobby = Dog()
-garfield = Cat()
+circle = Circle(radius=5)
+rectangle = Rectangle(width=4, height=7)
 
-print(bobby.sound())
-print(garfield.sound())
-
-animal = Animal()
-print(animal.sound())
+shape_info(circle)
+shape_info(rectangle)
