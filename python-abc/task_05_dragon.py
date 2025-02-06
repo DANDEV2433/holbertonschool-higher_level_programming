@@ -15,11 +15,5 @@ class FlyMixin:
 
 
 class Dragon(SwimMixin, FlyMixin):
-    def __init__(self):
-        self.Draco = 'Draco'
-
     def roar(self):
-        print(f"the dragon {self.Draco} roars!")
-
-    def fire(self):
-        print(f"the dragon {self.Draco} spits fire")
+        print("the dragon roars!")
