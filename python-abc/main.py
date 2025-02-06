@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
-from task_03_countediterator import CountedIterator
+from task_04_flyingfish import Fish, FlyingFish
 
-data = [1, 2, 3, 4]
-counted_iter = CountedIterator(data)
-
-try:
-    while True:
-        item = next(counted_iter)
-        print(f"Got {item}, total {counted_iter.get_count()} items iterated.")
-except StopIteration:
-    print("No more items.")
+flying_fish = FlyingFish()
+flying_fish.swim()
+flying_fish.fly()
+flying_fish.habitat()
