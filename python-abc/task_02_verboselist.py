@@ -10,14 +10,15 @@ class VerboseList(list):
         super().append(item)
         print(f"Added {[item]} to the list.")
 
-    def extend(self, x):
-        super().extend(x)
-        print(f"Extended the list with {len[x]} items.")
+    def extend(self, elements):
+        super().extend(elements)
+        print(f"Extended the list with {[len(elements)]} items.")
 
     def remove(self, item):
         print(f"Removed {[item]} from the list.")
         super().remove(item)
 
-    def pop(self, item):
-        super().pop(item)
+    def pop(self, index=-1):
+        item = super().pop(index)
         print(f"Popped {[item]} from the list.")
+        return item
