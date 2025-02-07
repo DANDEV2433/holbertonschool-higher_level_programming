@@ -31,7 +31,7 @@ class Circle(Shape):
     concrete class Circle inheriting from Shape
     """
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         return pi * self.radius ** 2
