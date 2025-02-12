@@ -21,7 +21,7 @@ def convert_csv_to_json(csv_filename):
             """
             Writes the data list to the JSON file using 4-space indentation
             """
-            json.dump('data.json', jsonfile, indent=4)
+            json.dump(data, jsonfile, indent=4)
             return True
     except FileNotFoundError:
         return False
