@@ -31,7 +31,7 @@ class CustomObject():
         of the object and save it to the provided filename.
         """
         try:
-            with open('filename', 'wb') as file:
+            with open(filename, 'wb') as file:
                 pickle.dump(self, file)
         except Exception as e:
             print(f"Serialization error: {e}")
@@ -45,7 +45,7 @@ class CustomObject():
         an instance of the CustomObject from the provided filename.
         """
         try:
-            with open('filename', 'rb') as file:
+            with open(filename, 'rb') as file:
                 return pickle.load(file)
         except Exception as e:
             print(f"Deserialization error: {e}")
