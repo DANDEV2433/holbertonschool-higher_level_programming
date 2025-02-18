@@ -28,12 +28,12 @@ def fetch_and_save_posts():
                 "body": post["body"]
             }for post in posts
         ]
-    with open('post.csv', 'w', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ["id", "title", "body"]
-        # Crée un objet DictWriter qui utilise les noms des colonnes définis.
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(new_posts)
+        with open('post.csv', 'w', newline='', encoding='utf-8') as csvfile:
+            fieldnames = ["id", "title", "body"]
+            # Crée un objet DictWriter qui utilise les noms des colonnes définis.
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(new_posts)
 
 
 fetch_and_print_posts()
