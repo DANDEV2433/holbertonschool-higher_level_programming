@@ -11,8 +11,7 @@ from flask import request
 
 # # une instance de l'application Flask
 app = Flask(__name__)
-users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
-username = {"username": "john", "name": "John", "age": 30, "city": "New York"}
+users = {}
 
 
 @app.route("/")
