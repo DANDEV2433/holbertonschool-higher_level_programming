@@ -12,14 +12,13 @@ if __name__ == "__main__":
 
     # Connexion à la base de données MySQL
     db = MySQLdb.connect(host="localhost",
-                         port=3306,
                          user=mysql_username,
                          passwd=mysql_password,
-                         db=database_name)
+                         db=database_name,
+                         port=3306)
 
     # Création d'un objet curseur
     cursor = db.cursor()
-
     # Exécuter la requête SQL
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
 
@@ -29,7 +28,6 @@ if __name__ == "__main__":
     # Afficher chaque état
     for state in states:
         print(state)
-
     # Fermer le curseur et la connexion
     cursor.close()
     db.close()
