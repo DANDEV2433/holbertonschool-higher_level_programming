@@ -11,11 +11,13 @@ if __name__ == "__main__":
     database_name = sys.argv[3]
 
     # Connexion à la base de données MySQL
-    db = MySQLdb.connect(host="localhost",
-                         user=mysql_username,
-                         passwd=mysql_password,
-                         db=database_name,
-                         port=3306)
+    db = MySQLdb.connect(
+        host="localhost",
+        user=mysql_username,
+        passwd=mysql_password,
+        db=database_name,
+        port=3306
+    )
 
     # Création d'un objet curseur
     cursor = db.cursor()
