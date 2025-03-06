@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     # Connexion à la base de données MySQL
     db = MySQLdb.connect(
-        host="localhost",
+        host='localhost',
         user=mysql_username,
         password=mysql_password,
         db=database_name,
