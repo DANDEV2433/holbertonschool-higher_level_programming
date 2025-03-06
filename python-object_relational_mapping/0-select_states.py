@@ -15,14 +15,14 @@ if __name__ == "__main__":
         host='localhost',
         user=mysql_username,
         password=mysql_password,
-        db=database_name,
+        database=database_name,
         port=3306
     )
 
     # Création d'un objet curseur
     cursor = db.cursor()
     # Exécuter la requête SQL
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC;")
 
     # Récupérer tous les résultats de la requête
     states = cursor.fetchall()
