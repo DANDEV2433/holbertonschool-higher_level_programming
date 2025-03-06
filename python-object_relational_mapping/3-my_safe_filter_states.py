@@ -25,10 +25,9 @@ if __name__ == "__main__":
     # Création d'un objet curseur
     cursor = db.cursor()
     # Exécuter la requête SQL
-    query = "SELECT * FROM states WHERE name LIKE '{}%'" \
-        "ORDER BY id ASC".format(state_name_searched)
+    query = "SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC"
 
-    cursor.execute(query)
+    cursor.execute(query, (state_name_searched + '%',))
 
     # Récupérer tous les résultats de la requête
     states = cursor.fetchall()
