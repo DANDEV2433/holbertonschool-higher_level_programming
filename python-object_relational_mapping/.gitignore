@@ -2,4 +2,7 @@ echo "/SQL_more_queries/mon_env/" >> .gitignore
 echo "/monenv/" >> .gitignore
 echo "*.pyc" >> .gitignore
 echo "__pycache__/" >> .gitignore
-echo "*.dist-info/" >> .gitignore
+echo "*.dist-info/" >> .gitignore/SQL_more_queries/mon_env/
+/monenv/
+/SQL_more_queries/mon_env/
+/monenv/
