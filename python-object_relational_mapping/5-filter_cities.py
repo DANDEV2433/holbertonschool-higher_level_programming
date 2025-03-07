@@ -29,15 +29,13 @@ if __name__ == "__main__":
                     SELECT cities.name
                     FROM cities
                     JOIN states ON cities.state_id = states.id
+                    WHERE states.name = %s
                     ORDER BY cities.id ASC;
-    """)
+    """, (state_name,))
 
     # Récupérer tous les résultats de la requête
     cities = cursor.fetchall()
-
-    # 
-    for cities in state_name:
-        print(cities)
+    print(", ".join([city[0] for city in cities]))
     # Fermer le curseur et la connexion
     cursor.close()
     db.close()
