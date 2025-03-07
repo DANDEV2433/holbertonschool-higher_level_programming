@@ -31,6 +31,6 @@ session = Session()
 states = session.query(State).order_by(State.id).all()
 
 for State in states:
-    print('{}, {}'.format(State.id, State.name))
-          
+    print('{}: {}'.format(State.id, State.name))
+
 session.close()
