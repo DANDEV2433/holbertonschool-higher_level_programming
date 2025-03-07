@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-script that lists all the State objects in the hbtn_0e_6_usa database
+script that prints the first State object from the database hbtn_0e_6_usa
 """
-from model_state import State, Base
+from model_state import State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 import sys
@@ -23,9 +23,9 @@ Session = sessionmaker(bind=engine)
 # Création d'une instance de session
 session = Session()
 # Requête pour récupérer tous les objets State et les trier par id
-states = session.query(State).order_by(State.id).all()
-
-for State in states:
+State = session.query(State).order_by(State.id).first()
+if State:
     print('{}: {}'.format(State.id, State.name))
-
+else:
+    print("Nothing")
 session.close()
