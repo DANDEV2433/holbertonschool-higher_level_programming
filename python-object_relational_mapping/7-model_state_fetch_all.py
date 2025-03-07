@@ -2,22 +2,18 @@
 """
 script that lists all the State objects in the hbtn_0e_6_usa database
 """
-from model_state import State, Base
+from model_state import State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 import sys
 
 if __name__ == "__main__":
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    database_name = sys.argv[3]
-
-engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-    sys.argv[1],
-    sys.argv[2],
-    sys.argv[3]
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+        sys.argv[1],
+        sys.argv[2],
+        sys.argv[3]
     ),
-    pool_pre_ping=True)
+        pool_pre_ping=True)
 # Création d'une classe de session configurée
 Session = sessionmaker(bind=engine)
 # Création d'une instance de session
