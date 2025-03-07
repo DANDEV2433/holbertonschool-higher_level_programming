@@ -2,7 +2,6 @@
 """
 script that lists all the State objects in the hbtn_0e_6_usa database
 """
-
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 # créer un moteur de base de données
