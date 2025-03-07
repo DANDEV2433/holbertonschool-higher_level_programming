@@ -2,7 +2,7 @@
 """
 script that lists all the State objects in the hbtn_0e_6_usa database
 """
-from model_state import State
+from model_state import State, Base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 import sys
