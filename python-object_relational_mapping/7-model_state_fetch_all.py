@@ -19,9 +19,6 @@ engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
     sys.argv[3]
     ),
     pool_pre_ping=True)
-# Création de toutes les tables
-# définies par les sous-classes de Base (si elles n'existent pas déjà)
-Base.metadata.create_all(engine)
 # Création d'une classe de session configurée
 Session = sessionmaker(bind=engine)
 # Création d'une instance de session
