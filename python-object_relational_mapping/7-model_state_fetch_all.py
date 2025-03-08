@@ -14,11 +14,8 @@ if __name__ == "__main__":
         sys.argv[3]
     ),
         pool_pre_ping=True)
-# Création d'une classe de session configurée
 Session = sessionmaker(bind=engine)
-# Création d'une instance de session
 session = Session()
-# Requête pour récupérer tous les objets State et les trier par id
 states = session.query(State).order_by(State.id).all()
 
 for State in states:
