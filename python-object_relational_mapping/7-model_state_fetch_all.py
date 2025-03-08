@@ -2,7 +2,7 @@
 """
 script that lists all the State objects in the hbtn_0e_6_usa database
 """
-from model_state import Base, State
+from model_state import State, Base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 import sys
@@ -21,8 +21,8 @@ if __name__ == "__main__":
         pool_pre_ping=True)
 Session = sessionmaker(bind=engine)
 session = Session()
-states = session.query(State).order_by(State.id).all()
 
+states = session.query(State).order_by(State.id).all()
 for state in states:
     print('{}: {}'.format(state.id, state.name))
 
