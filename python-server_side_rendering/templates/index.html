@@ -4,16 +4,14 @@
        <title>My Flask App</title>
    </head>
    <body>
-<header>
-       <h1>My Flask App</h1>
-</header>
-       <h1>Welcome to My Flask App</h1>
-       <p>This is a simple Flask application.</p>
-       <ul>
+        {% include 'header.html' %}
+        <h1>Welcome to My Flask App</h1>
+        <p>This is a simple Flask application.</p>
+        <ul>
            <li>Flask</li>
            <li>HTML</li>
            <li>Templates</li>
-       </ul>
+        </ul>
+        {% include 'footer.html' %}
    </body>
-   <footer> <p>&copy; 2024 My Flask App</p> </footer>
    </html>
