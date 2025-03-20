@@ -1,10 +1,10 @@
 <!doctype html>
-   <html lang="en">
+<html lang="en">
 <head>
     <title>Items List</title>
 </head>
+{% include 'header.html' %}
 <body>
-    {% include 'header.html' %}
     {% if items and items|length > 0 %}
         <ul>
             {% for item in items %}
@@ -13,6 +13,6 @@
         </ul>
     {% else %}
         <p>No items found.</p>
-    {% include 'footer.html' %}
 </body>
+{% include 'footer.html' %}
 </html>
