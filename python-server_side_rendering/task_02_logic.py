@@ -17,7 +17,7 @@ def contact():
 
 @app.route('/items')
 def items():
-    with open('item.json', 'r') as file:
+    with open('items.json', 'r') as file:
         # Charge le contenu du fichier JSON et le convertit en un dictionnaire Python.
         data = json.load(file)
         # Récupère la clé items du dictionnaire data.
