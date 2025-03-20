@@ -23,8 +23,7 @@ def items():
         # Récupère la clé items du dictionnaire data.
         # Si la clé items est absente, retourne une liste vide ([])
         items_list = data.get("items", [])
-        return render_template('items.html', items=items_list)
-
+    return render_template('items.html', items=items_list)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

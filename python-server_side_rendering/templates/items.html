@@ -4,6 +4,7 @@
     <title>Items List</title>
 </head>
 <body>
+    {% include 'header.html' %}
     {% if items and items|length > 0 %}
         <ul>
             {% for item in items %}
@@ -12,5 +13,6 @@
         </ul>
     {% else %}
         <p>No items found.</p>
+    {% include 'footer.html' %}
 </body>
 </html>
