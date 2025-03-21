@@ -44,7 +44,10 @@ def get_products_from_sql():
             {"id": row[0], "name": row[1], "category": row[2], "price": row[3]}
             for row in rows
         ]
-        
+
         # Ferme la connexion
         conn.close()
         return products
+
+if __name__ == "__main__":
+    app.run(debug=True)
