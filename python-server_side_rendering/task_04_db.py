@@ -30,26 +30,6 @@ def data():
     # Passer les produits au modèle HTML
     return render_template("product_display.html", products=products)
 
-def create_database():
-    conn = sqlite3.connect('products.db')
-    cursor = conn.cursor()
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS Products (
-            id INTEGER PRIMARY KEY,
-            name TEXT NOT NULL,
-            category TEXT NOT NULL,
-            price REAL NOT NULL
-        )
-    ''')
-    cursor.execute('''
-        INSERT INTO Products (id, name, category, price)
-        VALUES
-        (1, 'Laptop', 'Electronics', 799.99),
-        (2, 'Coffee Mug', 'Home Goods', 15.99)
-    ''')
-    conn.commit()
-    conn.close()
-
 def get_products_from_sql():
         # Connecte à la base SQLite
         conn = sqlite3.connect('products.db')
@@ -64,10 +44,7 @@ def get_products_from_sql():
             {"id": row[0], "name": row[1], "category": row[2], "price": row[3]}
             for row in rows
         ]
-
+        
         # Ferme la connexion
         conn.close()
         return products
-    
-if __name__ == '__main__':
-    create_database()
