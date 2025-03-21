@@ -17,9 +17,13 @@ def data():
             products = [row for row in reader]
     else: # Si la source n'est ni "json" ni "csv".
         return render_template("product_display.html", error="Invalid source parameter.")
-    if products:
-        products = [product for product in products if int(product["id"]) == product_id]
+    if id:
+        products = [product for product in products if int(product["id"]) == id]
     if not products: # Vérifie si la liste est vide après le filtrage.
         return render_template("product_display.html", error="Product not found.")
+    
+    # Passer les produits au modèle HTML
+    return render_template("product_display.html", products=products)
 
-
+if __name__ == "__main__":
+    app.run(debug=True)
